@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> Document </title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #curve {
+            fill: none;
+        }
+
+        .background {
+            background-image: url(./typing-fast-typing.gif);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.40;
+        }
+
+        .content {
+            display: grid;
+            position: absolute;
+            top: 100;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        fieldset {
+            font-size: 30px;
+            width: 600px;
+            display: inline;
+            border: 3px solid rgb(57, 102, 85);
+            border-radius: 10px;
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+        #patrick {
+            width: 500px;
+            height: 500px;
+            margin-bottom: 50px;
+        }
+
+        .box {
+            display: inline;
+            font-size: 60px;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+    </div>
+
+    <svg viewBox="0 0 500 100">
+        <filter id="turbulence" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="5" />
+            <feDisplacementMap in="SourceGraphic" xChannelSelector="R" yChannelSelector="G" scale="20" />
+        </filter>
+        <text x="50%" y="50%" text-anchor="middle" font-size="15" filter="url(#turbulence)">
+            안녕하세요. 컴퓨터소프트웨어학부 18학번 조강일 입니다!
+        </text>
+    </svg>
+
+    <div class="content">
+        <fieldset>
+            <legend>
+                MBTI
+            </legend>
+            <svg viewBox="-160 0 500 200"">
+                <path id="curve" d="M 50,100 C 100,20 250,100 300,100" />
+                <text font-size="40px">
+                  <textPath href="#curve"> i s t j </textPath>
+                </text>
+              </svg>
+        </fieldset>
+        <fieldset>
+            <legend>
+                👍
+            </legend>
+            <ul>
+                <li> 노래 들으면서 코딩하는 것을 좋아합니다.  </li><br>
+                <li> 가볍게 하는 운동 </li><br>
+                <li> 강아지 </li><br>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend> ⚙️ </legend>
+            언어 : java, c++
+            <br>
+            툴 : 비주얼 스튜디오, 인텔리제이
+        </fieldset>
+        <fieldset>
+            <legend> 목표 </legend>
+            실제로 서비스 하는 프로젝트를 만들어보는 것을 목표로 하고 있습니다.<br>
+            <br>
+            다양한 경험을 쌓을 수 있으면 좋겠습니다.
+        </fieldset>
+        <fieldset>
+            <legend> 희망분야 </legend>
+            <mark> 백엔드 </mark>
+        </fieldset>
+        <img id="patrick" src="./backend.jpg" />
+    </div>
+</body>
+
+</html>
